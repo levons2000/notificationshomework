@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_view_margin">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/notification_image"
+                android:layout_width="@dimen/recyc_item_img_size"
+                android:layout_height="@dimen/recyc_item_img_size"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/notification_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/recyc_name_margin"
+                android:layout_marginTop="@dimen/recyc_name_margin_top"
+                android:layout_toEndOf="@id/notification_image"
+                android:textSize="@dimen/recyc_name_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/notification_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/notification_name"
+                android:layout_marginEnd="@dimen/recyc_day_margin_end"
+                android:layout_marginTop="@dimen/recyc_day_margin_top"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/notification_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/notification_day"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/recyc_time_margin_end"
+                android:layout_marginTop="@dimen/recyc_time_margin_top"
+                android:textSize="@dimen/recyc_time_text_size" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
